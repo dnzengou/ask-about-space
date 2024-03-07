@@ -79,7 +79,7 @@ with st.sidebar:
     #Website URL
     #website_url = st.text_input("Website URL")
     # eg. Paul Graham content: https://raw.githubusercontent.com/dnzengou/chat-with-my-website/main/docs/paulg-content.txt
-    website_url = "https://raw.githubusercontent.com/dnzengou/chat-with-my-website/main/docs/gnss-eo-euspa-market-report2024.txt"
+    website_url = "https://raw.githubusercontent.com/dnzengou/chat-with-url/main/docs/gnss-eo-euspa-market-report2024.txt"
 
 if website_url is None or website_url == "":
     st.info("Please enter a website URL")
