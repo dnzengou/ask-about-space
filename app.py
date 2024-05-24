@@ -36,8 +36,7 @@ def get_context_retriever_chain(vector_store):
     prompt = ChatPromptTemplate.from_messages([
       MessagesPlaceholder(variable_name="chat_history"),
       ("user", "{input}"),
-      ("user", "Do not give me an answer if it is not mentioned in the context as a fact. \n"),
-      ("user, "Given the above conversation, generate a search query to look up in order to get information relevant to the conversation")
+      ("user", "Do not give me an answer if it is not mentioned in the context as a fact. Given the above conversation, generate a search query to look up in order to get information relevant to the conversation")
     ])
     
     retriever_chain = create_history_aware_retriever(llm, retriever, prompt)
