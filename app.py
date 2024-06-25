@@ -80,8 +80,8 @@ with st.sidebar:
     #Website URL
     #website_url = st.text_input("Website URL")
     # eg. Paul Graham content: https://raw.githubusercontent.com/dnzengou/chat-with-my-website/main/docs/paulg-content.txt
-    # https://raw.githubusercontent.com/dnzengou/chat-with-url/main/docs/gnss-eo-satcom-euspa-market-report2024.txt
-    website_url = "https://raw.githubusercontent.com/dnzengou/chat-with-url/main/docs/tokenomics-data_062024.txt"
+    # https://raw.githubusercontent.com/dnzengou/chat-with-url/main/docs/tokenomics-data_062024.txt
+    website_url = "https://raw.githubusercontent.com/dnzengou/chat-with-url/main/docs/gnss-eo-satcom-euspa-market-report2024.txt"
 
 if website_url is None or website_url == "":
     st.info("Please enter a website URL")
@@ -91,7 +91,7 @@ else:
     # "Hello, ask about what space technologies can do for you on earth 🌍!"
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = [
-            AIMessage(content="Hello 👋🏾 Ask about everything tokenomics, crypto token and economics!"),
+            AIMessage(content="Hello 👋🏾 Ask about space!"),
         ]
     if "vector_store" not in st.session_state:
         st.session_state.vector_store = get_vectorstore_from_url(website_url)    
